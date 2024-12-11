@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'CSS/global.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>The Gym Beach Palma</title>
+  </head>
+
+  <body>
+    <div id="banner">
+      <div id="logo_div">
+        <img id="logo" src="{% static 'images/logo.png' %}" />
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'prices' %}">Price</a></li>
+            <li>Services</li>
+            <li>Timetable</li>
+            <li>Staff</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main>{% block content%} {% endblock %}</main>
+
+    <footer>
+      <div id="footer_layout">
+        <div>
+          <img id="footer_image" src="{% static 'images/logo.png' %}" />
+        </div>
+        <div>
+          <p>Carrer de Marbella, 15,</p>
+          <p>Playa de Palma, 07600 Palma, Balearic Islands</p>
+        </div>
+        <div id="footer_number">971261783</div>
+      </div>
+    </footer>
+  </body>
+</html>
