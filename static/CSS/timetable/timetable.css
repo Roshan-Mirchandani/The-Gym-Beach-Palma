@@ -1,0 +1,47 @@
+h1 {
+  justify-self: center;
+  font-family: "Kanit";
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+h2 {
+  justify-self: center;
+  font-family: "Kanit";
+  font-size: xx-large;
+  color: #8e5572;
+}
+
+h3 {
+  font-family: "Kanit";
+  font-size: x-large;
+  color: #8e5572;
+
+  font-style: italic;
+  justify-self: center;
+}
+
+#timetables_main {
+  display: flex;
+  flex: 1;
+}
+
+#timetable {
+  flex: 1;
+  padding: 2%;
+  margin: 2%;
+}
+
+#days_info {
+  font-family: "Roboto Slab";
+  font-size: larger;
+  color: #1a1a1a;
+  justify-self: center;
+}
+#time_info {
+  font-family: "Roboto Slab";
+  font-size: x-large;
+  color: #8eabce;
+  justify-self: center;
+  font-weight: bold;
+}

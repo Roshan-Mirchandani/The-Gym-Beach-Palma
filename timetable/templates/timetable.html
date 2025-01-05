@@ -1,0 +1,39 @@
+{%extends 'base.html' %} {% block content %}{% load static %}
+
+<link rel="stylesheet" href="{% static 'CSS/timetable/timetable.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<h1>Timetables</h1>
+
+<div id="timetables_main">
+  <div id="timetable">
+    <h2>Autumn/Winter/Spring Period</h2>
+    <h3>{{winter_season.dates}}</h3>
+    {% for info in winter_timetable %}
+    <p id="days_info">{{info.days}}</p>
+    <p id="time_info">{{info.time}}</p>
+    {% endfor %}
+  </div>
+
+  <div id="timetable" style="background-color: #1a1a1a">
+    <h2>Summer Period</h2>
+    <h3>{{summer_season.dates}}</h3>
+    {% for info in summer_timetable %}
+    <p id="days_info" style="color: lightgray" ;>{{info.days}}</p>
+    <p id="time_info">{{info.time}}</p>
+    {% endfor %}
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+{%endblock%}

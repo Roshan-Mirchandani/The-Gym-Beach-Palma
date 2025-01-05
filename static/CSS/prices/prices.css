@@ -1,0 +1,49 @@
+h1 {
+  justify-self: center;
+  font-family: "Kanit";
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Kanit";
+  color: #8eabce;
+  font-size: xx-large;
+}
+
+h3 {
+  font-family: "Kanit";
+  font-size: xx-large;
+}
+h4 {
+  font-size: large;
+  font-style: italic;
+  color: #8eabce;
+}
+#price_container {
+  padding: 2%;
+}
+
+#members_prices {
+  background-color: #1a1a1a;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+}
+#price_box_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+#price_boxes {
+  display: flex;
+  flex-direction: column;
+  background-color: #8eabce;
+  flex: 1;
+  aspect-ratio: 1;
+  padding: 1%;
+  font-family: "Roboto Slab";
+  font-size: large;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -1,4 +1,91 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static 'CSS/prices/prices.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
 <h1>Pricing</h1>
-<p>Here are our membership plans and pricing details!</p>
+<div id="price_container">
+  <div id="members_prices">
+    <h2>Membership plans for Regulars</h2>
+
+    <div id="price_box_container">
+      <div id="price_boxes">
+        <h3>Initial Payment: €{{initial_payment.price}}</h3>
+        <p>
+          This is an obligatory payment that covers your gym chip and server
+          fees
+        </p>
+      </div>
+
+      <div id="price_boxes">
+        <h3>Monthly Payments</h3>
+        {% for methods in monthly_payments %}
+        <p>Paying with {{methods.payment_method}} : €{{methods.price}}</p>
+        {% endfor %}
+      </div>
+
+      <div id="price_boxes">
+        <h3>Extra Payments</h3>
+        {% for extras in extra_payments %}
+        <p>{{extras.extra_service}}: €{{extras.price}}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <br /><br /><br /><br />
+
+  <div id="members_prices">
+    <h2>Membership plans for travelers</h2>
+    <h4>*The following prices are one time payments</h4>
+
+    <div id="price_box_container">
+      {% for rates in one_time_payments %}
+      <div
+        id="price_boxes"
+        style="justify-content: center; font-weight: bold; font-size: x-large"
+      >
+        <p>{{rates.days}} days: €{{rates.price}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <br /><br /><br /><br />
+
+  <div id="members_prices">
+    <h2>Renting equipment</h2>
+
+    <div id="price_box_container">
+      {% for rentable in rent_costs %}
+      <div
+        id="price_boxes"
+        style="
+          aspect-ratio: initial;
+          justify-content: center;
+          font-weight: bold;
+          font-size: x-large;
+        "
+      >
+        <p>Renting a {{rentable.rentable}}: €{{rentable.price}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% endblock %}
+<!--stuff to add: centralize the price boxes for members, finish otp and rentals,
+ work on color theory and dimensions a lil more-->
+
+<!-- next steps would be: timetable, should be fast, languages?, image selction for front page,
+  news page/email thang-->
