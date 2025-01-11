@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'prices',
-    'timetable'
+    'timetable',
+    'services'
 ]
 
 MIDDLEWARE = [

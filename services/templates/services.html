@@ -1,0 +1,101 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+
+<link rel="stylesheet" href="{% static 'CSS/services/services.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<div id="services_container">
+  <aside id="sidebar">
+    <br />
+    <nav>
+      <ul>
+        <li id="services_li">Gym Equipment</li>
+        <li id="services_li">Personal Trainers</li>
+        <li id="services_li">Tanning bed</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div id="content">
+    <h1>Services</h1>
+
+    <div class="content_block">
+      <h2>Gym Equipment</h2>
+      <p class="header_ext">Our gym provides a variety of equipment to help fit your needs best, any goal is possible! Click the arrow to go through each section.</p>
+      <br />
+
+      <div class="content_block_info" id="equipment_slider">
+        <div class="image_description" id="image_description1">
+          {% if gym_equipment %}
+          <p>{{gym_equipment.0.description}}</p>
+          {% endif %}
+        </div>
+
+        <div class="image_gallery">
+          <button class="buttons" id="prev1">&#10094;</button>
+          <div class="slider_container">
+            {% for equipment in gym_equipment %}
+            <img src="{{ equipment.image.url }}" alt="{{ equipment.name}}" class="{% if forloop.first %}active{% endif %}" data-description="{{equipment.description}}" />
+            {% endfor %}
+          </div>
+          <button class="buttons" id="next1">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content_block" id="pt_slider">
+      <h2>Personal Trainers</h2>
+      <p class="header_ext">Never gone to a gym before? Dont know where to start? Stuck with your progress?</p>
+      <div class="content_block_info">
+        <div class="image_gallery">
+          <button class="buttons" id="prev2">&#10094;</button>
+          <div class="slider_container">
+            {% for type in personal_trainer %}
+            <img src="{{ type.image.url }}" alt="{{ type.name}}" class="{% if forloop.first %}active{% endif %}" data-description="{{type.description}}" />
+            {% endfor %}
+          </div>
+          <button class="buttons" id="next2">&#10095;</button>
+        </div>
+
+        <div class="image_description" id="image_description2">
+          {% if personal_trainer %}
+          <p>{{personal_trainer.0.description}}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="content_block">
+      <h2>Tanning bed</h2>
+      <p class="header_ext">Not only bodybuilders should look bronze!</p>
+      <div class="content_block_info">
+        {% if tanning_bed.first %}
+        <div class="image_description">
+          <p>{{tanning_bed.0.description}}</p>
+        </div>
+        <div class="image_gallery">
+          <div class="slider_container">
+            <img src="{{tanning_bed.0.image.url}}" alt="{{tanning_bed.name}}" class="active" />
+          </div>
+        </div>
+        {%endif%}
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<br />
+
+<script src="{% static 'js/services/services.js' %}"></script>
+
+{% endblock %}
+<!--almost done with this, just gotta fix the aside tag and also make the nav bar fixed-->
