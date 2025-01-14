@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'homepage',
     'prices',
     'timetable',
-    'services'
+    'services',
+    'staff'
 ]
 
 MIDDLEWARE = [

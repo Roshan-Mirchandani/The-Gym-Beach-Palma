@@ -1,0 +1,75 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'CSS/staff/staff.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<div id="staff_container">
+  <h1>Staff</h1>
+
+  <div id="assistant_section">
+    <div class="intro">
+      <h2>Gym Assistants</h2>
+      <p class="intro_text">2 of the following staff members are always available to help out with any questions you have</p>
+    </div>
+    <br /><br /><br /><br />
+    <div class="staff_row">
+      {% for member in staff %}
+      <div class="staff_column">
+        <div class="img_container"><img src="{{member.portrait.url}}" /></div>
+
+        <p class="name">{{member.name}}</p>
+        <p class="role">{{member.role}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <br /><br /><br /><br />
+
+  <div id="pt_section">
+    <div class="intro">
+      <h2>Personal Trainers</h2>
+      <p class="intro_text">The following are a list of licensed personal trainers our gym offers</p>
+    </div>
+
+    <br /><br /><br />
+
+    {% for trainer in personal_trainer %} {% if forloop.counter0|divisibleby:2 %}
+    <div class="pt_container">
+      <div class="pt_image">
+        <img src="{{trainer.portrait.url}}" />
+      </div>
+      <div class="pt_text">
+        <p class="name">{{trainer.name}}</p>
+        <p class="languages">Languages: {{trainer.languages}}</p>
+        <p class="text">{{trainer.text}}</p>
+        <p class="number">Whatsapp Number: {{trainer.whatsapp_number}}</p>
+      </div>
+    </div>
+
+    {% else %}
+
+    <div class="pt_container">
+      <div class="pt_text" style="padding-left: 10%; padding-right: 2%">
+        <p class="name" style="text-align: right">{{trainer.name}}</p>
+        <p class="languages" style="text-align: right">Languages: {{trainer.languages}}</p>
+        <p class="text">{{trainer.text}}</p>
+        <p class="number" style="text-align: right">Whatsapp Number: {{trainer.whatsapp_number}}</p>
+      </div>
+      <div class="pt_image" style="justify-content: flex-start">
+        <img src="{{trainer.portrait.url}}" />
+      </div>
+    </div>
+    {% endif %}
+    <br /><br /><br />
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

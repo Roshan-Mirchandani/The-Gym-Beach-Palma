@@ -1,0 +1,123 @@
+h1 {
+  justify-self: center;
+  font-family: "Kanit";
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Kanit";
+  font-size: xx-large;
+}
+
+.intro {
+  background-color: #1a1a1a;
+  color: #8eabce;
+  padding: 3%;
+}
+
+.intro_text {
+  font-family: "Roboto Slab";
+  font-size: large;
+}
+#staff_container {
+}
+
+#assistant_section {
+  width: 100%;
+}
+
+.staff_row {
+  display: flex;
+}
+
+.staff_column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.staff_column div.img_container {
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  border: 5px inset #1a1a1a;
+}
+
+.staff_column div.img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.staff_column p.name {
+  font-family: "Kanit";
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.staff_column p.role {
+  font-family: "Roboto Slab";
+  font-size: larger;
+  font-style: italic;
+  color: gray;
+}
+
+#pt_section {
+  width: 100%;
+  flex-direction: column;
+}
+
+.pt_container {
+  display: flex;
+  width: 100%;
+}
+.pt_image {
+  max-height: 95vh;
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+.pt_image img {
+  height: 95%;
+  width: auto;
+  border: 20px solid #1a1a1a;
+}
+.pt_text {
+  max-height: 90vh;
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 10%;
+  padding-left: 2%;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: lightgray;
+  align-self: center;
+}
+
+.pt_text p.name {
+  font-size: xx-large;
+  font-family: "Kanit";
+  font-style: italic;
+  justify-self: center;
+  font-weight: bold;
+  color: #8eabce;
+}
+
+.pt_text p.languages,
+p.text {
+  justify-self: flex-start;
+  font-family: "Roboto Slab";
+  font-size: larger;
+  text-align: justify;
+}
+
+.pt_text p.number {
+  justify-self: flex-start;
+  font-family: "Roboto Slab";
+  font-size: larger;
+  font-weight: bold;
+}
