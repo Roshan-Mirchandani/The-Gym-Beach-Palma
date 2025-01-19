@@ -1,0 +1,101 @@
+h1 {
+  justify-self: center;
+  font-family: "Kanit";
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+#contact_container {
+  background-color: #1a1a1a;
+  display: flex;
+  color: lightgray;
+  border-bottom: #8eabce solid 2px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#contact_info {
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 3%;
+}
+
+.row1 {
+  font-size: larger;
+  color: #8eabce;
+  font-family: "Roboto Slab";
+}
+.row2 {
+  font-size: larger;
+  font-family: "Roboto Slab";
+}
+
+#form_container {
+  flex: 1;
+  box-sizing: border-box;
+  padding-right: 3%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: x-large;
+  font-family: "Kanit";
+}
+
+button {
+  background-color: #8eabce;
+  color: #1a1a1a;
+  border-radius: 5px;
+  font-family: "Kanit";
+  font-size: x-large;
+  font-weight: bold;
+  padding: 1%;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  font-size: large;
+  padding: 1%;
+  font-family: "Roboto Slab";
+}
+
+#message_modal.hidden {
+  display: none;
+}
+
+#message_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+  background-color: lightgray;
+  color: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Robot Slab";
+  font-size: larger;
+}
+
+.close_btn {
+  font-size: medium;
+  font-family: "Kanit";
+  text-decoration: underline;
+  cursor: pointer;
+}

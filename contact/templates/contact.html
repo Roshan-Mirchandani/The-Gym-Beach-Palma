@@ -1,0 +1,71 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'CSS/contact/contact.css' %}" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+
+<h1>Contact Us</h1>
+
+<div id="contact_container">
+  <div id="contact_info">
+    <div>
+      <p class="row1">Telephone Number</p>
+      <p class="row2">+34 971261783</p>
+    </div>
+    <br />
+    <div>
+      <p class="row1">Email</p>
+      <p class="row2">thegymbeachpalma@gmail.com</p>
+    </div>
+    <br />
+    <div>
+      <p class="row1">Address</p>
+      <p class="row2">Carrer de Marbella, 15,</p>
+      <p class="row2">Playa de Palma, 07600</p>
+      <p class="row2">Palma, Balearic Islands</p>
+    </div>
+  </div>
+
+  <div id="form_container">
+    <form action="/contact/" method="POST">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="number">Phone Number (optional):</label>
+      <input type="text" inputmode="numeric" id="number" name="number" />
+      <label for="query">Message:</label>
+      <textarea id="query" name="query" rows="5" required></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<!--Pop Up Modal-->
+<div id="message_modal" class="hidden">
+  <div class="modal_content">
+    <p id="modal_message">help</p>
+    <span class="close_btn" id="close_btn">close</span>
+  </div>
+</div>
+
+{% if messages %}
+<script type="application/json" id="messages_json">
+  {{ messages|safe}}
+</script>
+{% else %}
+<script type="application/json" id="messages_json">
+  []
+</script>
+{% endif %}
+
+<script src="{% static 'js/contact/contact.js' %}"></script>
+{% endblock %}

@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,7 +43,8 @@ INSTALLED_APPS = [
     'prices',
     'timetable',
     'services',
-    'staff'
+    'staff',
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +129,16 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Use SMTP to send emails
+EMAIL_HOST = 'smtp.gmail.com'  # Example: Gmail SMTP server
+EMAIL_PORT = 587  # Port for TLS
+EMAIL_USE_TLS = True  # Use TLS for secure communication
+EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+EMAIL_RECEIVER = 'roshan.experiments.stuff@gmail.com'
+
+#$env:EMAIL_USER = "your_email@gmail.com"
+#bxzg bopz ftpw qbsj
+
+print(EMAIL_HOST_USER)
