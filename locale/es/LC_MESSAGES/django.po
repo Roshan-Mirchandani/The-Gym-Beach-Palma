@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-23 18:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: .\contact\templates\contact.html:14
+msgid "Contact Us"
+msgstr "Contacto"
+
+#: .\contact\templates\contact.html:19
+msgid "Telephone Number"
+msgstr "Teléfono"
+
+#: .\contact\templates\contact.html:24 .\contact\templates\contact.html:41
+msgid "Email"
+msgstr "Correo Electronico"
+
+#: .\contact\templates\contact.html:29
+msgid "Address"
+msgstr "Dirección"
+
+#: .\contact\templates\contact.html:39
+msgid "Name"
+msgstr "Nombre"
+
+#: .\contact\templates\contact.html:43
+msgid "Phone Number (optional)"
+msgstr "Teléfono (opcional)"
+
+#: .\contact\templates\contact.html:45
+msgid "Message"
+msgstr "Mensaje"
+
+#: .\contact\templates\contact.html:47
+msgid "SUBMIT"
+msgstr "ENVIAR"
+
+#: .\contact\views.py:30
+msgid "Your query has been sent successfully!"
+msgstr "Tu mensaje ha sido enviada exitosamente"
+
+#: .\contact\views.py:35
+msgid "Failed to send message. Try again!"
+msgstr "No se pudo mandar su mensaje. Por favor intente de nuevo!"
+
+#: .\homepage\templates\homepage\index.html:21
+msgid "Welcome to The Gym Beach Palma"
+msgstr "Bienvenido a The Gym Beach Palma "
+
+#: .\homepage\templates\homepage\index.html:22
+msgid "Work out with a gorgeous view!"
+msgstr "Entrena con una vista hermosa!"
+
+#: .\homepage\templates\homepage\index.html:27
+msgid ""
+" The Gym Beach Palma is a local gym situated close to the beach of Arenal.\n"
+"      Easily accessible through public transport, using the EMT lines 23,25 "
+"and 31! Easily walkable\n"
+"      by many of the local hotels. "
+msgstr ""
+"The Gym Beach Palma es un gimnasio local situado cerca de la playa de "
+"Arenal. Facilmente accessible a traves de transporte publico usando las "
+"lineas EMT 23,25 31. Tambien accesible de pie de muchos hoteles locales."
+
+#: .\homepage\templates\homepage\index.html:32
+msgid ""
+" We host a variety of machines to help you get your most optimal workout, "
+"not\n"
+"      to mention, stunning views of the beach which you can go to right "
+"after you work up a sweat!\n"
+"      "
+msgstr ""
+"Tenemos una variedad de máquinas para ayudarlo a obtener su entrenamiento "
+"más óptimo, sin mencionar las impresionantes vistas de la playa a las que "
+"puede ir inmediatamente después de ejercitarse."
+
+#: .\prices\templates\prices\prices.html:15
+msgid "Pricing"
+msgstr "Precio"
+
+#: .\prices\templates\prices\prices.html:18
+msgid "Membership plans for Regulars"
+msgstr "Planes para socios"
+
+#: .\prices\templates\prices\prices.html:23
+msgid "This is an obligatory payment that covers your gym chip and server fees"
+msgstr ""
+"Esto es un pago obligatorio que cubre el chip del gimnasio y tarifas del "
+"servidor "
+
+#: .\prices\templates\prices\prices.html:27
+msgid "Monthly Payments"
+msgstr "Pagos Mensuales"
+
+#: .\prices\templates\prices\prices.html:34
+msgid "Extra Payments"
+msgstr "Pagos Extras"
+
+#: .\prices\templates\prices\prices.html:45
+msgid "Membership plans for travelers"
+msgstr "Planes para viajeros"
+
+#: .\prices\templates\prices\prices.html:46
+msgid "*The following prices are one time payments"
+msgstr "*Los siguientes precios son pagos unicos"
+
+#: .\prices\templates\prices\prices.html:60
+msgid "Renting equipment"
+msgstr "Alquiler de equipaje"
+
+#: .\services\templates\services.html:20
+msgid "Gym Equipment"
+msgstr "Aparatos del Gimnasio"
+
+#: .\services\templates\services.html:21 .\services\templates\services.html:63
+#: .\staff\templates\staff.html:41
+msgid "Personal Trainers"
+msgstr "Entrenadores Personales"
+
+#: .\services\templates\services.html:22 .\services\templates\services.html:92
+msgid "Tanning bed"
+msgstr "Cama de Bronceado"
+
+#: .\services\templates\services.html:28 .\templates\base.html:28
+msgid "Services"
+msgstr "Servicios"
+
+#: .\services\templates\services.html:33
+msgid ""
+" Our gym provides a variety of equipment to help fit your needs best, any\n"
+"        goal is possible! Click the arrow to go through each section. "
+msgstr "Nuestro gimnasio ofrece una variedad de aparatos para ayudar a satisfacer mejor sus necesidades, cualquier objetivo es posible! Pulse las flechas para ver cada seccion"
+
+#: .\services\templates\services.html:65
+msgid ""
+"Never gone to a gym before? Dont know where to start? Stuck with your "
+"progress?"
+msgstr "Nunca has ido al gimnasio? No sabes donde empezar? Atascado con tu progreso?"
+
+#: .\services\templates\services.html:93
+msgid "Not only bodybuilders should look bronze!"
+msgstr "¡No solo los culturistas deberían lucir de bronce!"
+
+#: .\staff\templates\staff.html:14 .\templates\base.html:30
+msgid "Staff"
+msgstr "Empleados"
+
+#: .\staff\templates\staff.html:18
+msgid "Gym Assistants"
+msgstr "Asistentes"
+
+#: .\staff\templates\staff.html:20
+msgid ""
+" 2 of the following staff members are always available to help out with any\n"
+"        questions you have\" "
+msgstr ""
+"2 de los siguientes asistentes estaran disponibles para cualquier duda que "
+"tengais"
+
+#: .\staff\templates\staff.html:43
+msgid "The following are a list of licensed personal trainers our gym offers"
+msgstr ""
+"Lo siguiente es una lista de entrenadores profesionales que nuestra gimnasio "
+"ofrece"
+
+#: .\templates\base.html:26
+msgid "Home"
+msgstr "Inicio"
+
+#: .\templates\base.html:27
+msgid "Price"
+msgstr "Precio"
+
+#: .\templates\base.html:29
+msgid "Timetable"
+msgstr "Horario"
+
+#: .\templates\base.html:31
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\timetable\templates\timetable.html:15
+msgid "Timetables"
+msgstr "Horarios"
+
+#: .\timetable\templates\timetable.html:19
+msgid "Autumn/Winter/Spring Period"
+msgstr "Temporada de Otoño/Invierno/Primavera"
+
+#: .\timetable\templates\timetable.html:28
+msgid "Summer Period"
+msgstr "Temporada de Verano"

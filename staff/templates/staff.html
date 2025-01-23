@@ -1,4 +1,4 @@
-{% extends 'base.html' %}{% load static %} {% block content %}
+{% extends 'base.html' %}{% load static %} {% load i18n %} {% block content %}
 <link rel="stylesheet" href="{% static 'CSS/staff/staff.css' %}" />
 
 <link
@@ -11,12 +11,15 @@
 />
 
 <div id="staff_container">
-  <h1>Staff</h1>
+  <h1>{% trans "Staff" %}</h1>
 
   <div id="assistant_section">
     <div class="intro">
-      <h2>Gym Assistants</h2>
-      <p class="intro_text">2 of the following staff members are always available to help out with any questions you have</p>
+      <h2>{% trans "Gym Assistants" %}</h2>
+      <p class="intro_text">
+        {% blocktrans %} 2 of the following staff members are always available to help out with any
+        questions you have" {% endblocktrans %}
+      </p>
     </div>
     <br /><br /><br /><br />
     <div class="staff_row">
@@ -35,8 +38,10 @@
 
   <div id="pt_section">
     <div class="intro">
-      <h2>Personal Trainers</h2>
-      <p class="intro_text">The following are a list of licensed personal trainers our gym offers</p>
+      <h2>{% trans "Personal Trainers" %}</h2>
+      <p class="intro_text">
+        {% trans "The following are a list of licensed personal trainers our gym offers" %}
+      </p>
     </div>
 
     <br /><br /><br />

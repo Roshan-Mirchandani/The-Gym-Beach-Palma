@@ -1,4 +1,4 @@
-{% extends 'base.html'%} {% load static %} {% block content%}
+{% extends 'base.html'%} {% load static %} {% load i18n %}{% block content%}
 
 <link rel="stylesheet" href="{% static 'CSS/homepage/homepage.css' %}" />
 <img src="{% static 'images/homepage/intro bw.jpg' %}" id="first_image" />
@@ -18,19 +18,20 @@
 <br /><br /><br />
 <div id="intro_text">
   <div id="intro_title">
-    <h1>Welcome to The Gym Palma Beach</h1>
-    <h3>Work out with a gorgeous view!</h3>
+    <h1>{% trans "Welcome to The Gym Beach Palma"%}</h1>
+    <h3>{% trans "Work out with a gorgeous view!"%}</h3>
   </div>
   <div id="intro_para">
+    <!--have a feeling its because how the string is wrapped to the next line, research blocktrans-->
     <p>
-      The Gym Beach Palma is a local gym situated close to the beach of Arenal.
-      Easily accessible through public transport, using the EMT lines 23,25 and
-      31! Easily walkable by many of the local hotels as well.
+      {% blocktrans %} The Gym Beach Palma is a local gym situated close to the beach of Arenal.
+      Easily accessible through public transport, using the EMT lines 23,25 and 31! Easily walkable
+      by many of the local hotels. {% endblocktrans %}
     </p>
     <p>
-      We host a variety of machines to help you get your most optimum workout
-      it, not to mention, stunning views of the beach which you can go to right
-      after you work up a sweat!
+      {% blocktrans %} We host a variety of machines to help you get your most optimal workout, not
+      to mention, stunning views of the beach which you can go to right after you work up a sweat!
+      {% endblocktrans %}
     </p>
   </div>
 </div>
@@ -40,18 +41,9 @@
   <div id="image_gallery">
     <button class="buttons" id="prev">&#10094;</button>
     <div id="slider_container">
-      <img
-        src="{% static 'images/homepage/gym gallery 1.jpeg' %}"
-        class="slider-image"
-      />
-      <img
-        src="{% static 'images/homepage/gym gallery 2.jpeg' %}"
-        class="slider-image"
-      />
-      <img
-        src="{% static 'images/homepage/gym gallery 3.jpeg' %}"
-        class="slider-image"
-      />
+      <img src="{% static 'images/homepage/gym gallery 1.jpeg' %}" class="slider-image" />
+      <img src="{% static 'images/homepage/gym gallery 2.jpeg' %}" class="slider-image" />
+      <img src="{% static 'images/homepage/gym gallery 3.jpeg' %}" class="slider-image" />
     </div>
     <button class="buttons" id="next">&#10095;</button>
   </div>

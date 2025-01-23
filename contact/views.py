@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages  # To show success/error messages
 from django.http import HttpResponseRedirect 
+from django.utils.translation import gettext as _
 import json
 
 # Create your views here.
@@ -26,14 +27,15 @@ def contact(request):
                 [settings.EMAIL_RECEIVER],
                 fail_silently=False
             )
-
-            messages.success(request, 'Your query has been sent successfully!')
+            succes_message = _('Your query has been sent successfully!')
+            messages.success(request,succes_message )
             return HttpResponseRedirect('/contact/')
         except:
             # Show an error message if email fails
-            messages.error(request,'Failed to send message. Try again!')
+            fail_message =_('Failed to send message. Try again!')
+            messages.error(request,fail_message)
     message_list = [message.message for message in messages.get_messages(request)]
-    print("Debug: message_list =", message_list)
+    
 
     return render(request,'contact.html', {'messages': json.dumps(message_list)})
 

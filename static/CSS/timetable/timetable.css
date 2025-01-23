@@ -7,6 +7,7 @@ h1 {
 
 h2 {
   justify-self: center;
+  text-align: center;
   font-family: "Kanit";
   font-size: xx-large;
   color: #8e5572;
@@ -16,7 +17,7 @@ h3 {
   font-family: "Kanit";
   font-size: x-large;
   color: #8e5572;
-
+  text-align: center;
   font-style: italic;
   justify-self: center;
 }
@@ -30,6 +31,8 @@ h3 {
   flex: 1;
   padding: 2%;
   margin: 2%;
+  display: flex;
+  flex-direction: column;
 }
 
 #days_info {
@@ -37,6 +40,7 @@ h3 {
   font-size: larger;
   color: #1a1a1a;
   justify-self: center;
+  text-align: center;
 }
 #time_info {
   font-family: "Roboto Slab";
@@ -44,4 +48,5 @@ h3 {
   color: #8eabce;
   justify-self: center;
   font-weight: bold;
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %}{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +23,30 @@
       <div>
         <nav>
           <ul id="base_nav">
-            <li id="base_nav_li"><a href="{% url 'home' %}">Home</a></li>
-            <li id="base_nav_li"><a href="{% url 'prices' %}">Price</a></li>
-            <li id="base_nav_li"><a href="{% url 'services' %}">Services</a></li>
-            <li id="base_nav_li"><a href="{% url 'timetable' %}">Timetable</a></li>
-            <li id="base_nav_li"><a href="{% url 'staff'%}">Staff</a></li>
-            <li id="base_nav_li"><a href="{% url 'contact' %}">Contact</a></li>
+            <li id="base_nav_li"><a href="{% url 'home' %}">{% trans "Home"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'prices' %}">{% trans "Price"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'services' %}">{% trans "Services"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'timetable' %}">{% trans "Timetable"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'staff'%}">{% trans "Staff"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'contact' %}">{% trans "Contact"%}</a></li>
+            <li id="base_nav_li">
+              <form method="post" action="{% url 'set_language' %}" >
+                {% csrf_token %}
+                <select name="language" onchange="this.form.submit()" id="language_select">
+                  <!-- prettier-ignore-start -->
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %} 
+                  {% get_language_info_list for LANGUAGES as languages %} 
+                  {% for  language in languages %} {% if language.code == LANGUAGE_CODE%}
+                  <option value="{{ language.code }}" selected id="language_option">{{language.code|upper}}</option>
+                  {%else%}
+                  <option value="{{ language.code }}" id="language_option">{{language.code|upper}}</option>
+                  {%endif%}
+                  {% endfor %}
+                  <!-- prettier-ignore-end -->
+                </select>
+              </form>
+            </li>
           </ul>
         </nav>
       </div>
@@ -50,3 +68,22 @@
   </body>
 </html>
 <!-- superuser/ username : steven123 / email : / password: mancuernas-->
+
+
+ <!-- very messy i know, django wont allow me to type"==" inside the option tag-->
+  <!-- CODE TO USE IF PRETTIER MESSES WITH DJANGO SYNTAX FORMATTING
+ <select name="language" onchange="this.form.submit()">
+  {%if LANGUAGE_CODE == "en" %}
+  <option value="en" selected>EN</option>
+  {% else %}
+  <option value="en">EN</option>
+  {% endif %} {%if LANGUAGE_CODE == "es" %}
+  <option value="es" selected>ES</option>
+  {% else %}
+  <option value="es">ES</option>
+  {% endif %} {%if LANGUAGE_CODE == "de" %}
+  <option value="de" selected>DE</option>
+  {% else %}
+  <option value="de">DE</option>
+  {% endif %}
+-->

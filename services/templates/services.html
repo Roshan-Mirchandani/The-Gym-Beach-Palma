@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %}{% block content %}
+{% extends 'base.html' %} {% load static %} {% load i18n %}{% block content %}
 
 <link rel="stylesheet" href="{% static 'CSS/services/services.css' %}" />
 
@@ -17,19 +17,22 @@
     <br />
     <nav>
       <ul>
-        <li id="services_li">Gym Equipment</li>
-        <li id="services_li">Personal Trainers</li>
-        <li id="services_li">Tanning bed</li>
+        <li id="services_li">{% trans "Gym Equipment" %}</li>
+        <li id="services_li">{% trans "Personal Trainers" %}</li>
+        <li id="services_li">{% trans "Tanning bed" %}</li>
       </ul>
     </nav>
   </aside>
 
   <div id="content">
-    <h1>Services</h1>
+    <h1>{% trans "Services" %}</h1>
 
     <div class="content_block">
-      <h2>Gym Equipment</h2>
-      <p class="header_ext">Our gym provides a variety of equipment to help fit your needs best, any goal is possible! Click the arrow to go through each section.</p>
+      <h2>{% trans "Gym Equipment" %}</h2>
+      <p class="header_ext">
+        {% blocktrans %} Our gym provides a variety of equipment to help fit your needs best, any
+        goal is possible! Click the arrow to go through each section. {% endblocktrans%}
+      </p>
       <br />
 
       <div class="content_block_info" id="equipment_slider">
@@ -43,7 +46,12 @@
           <button class="buttons" id="prev1">&#10094;</button>
           <div class="slider_container">
             {% for equipment in gym_equipment %}
-            <img src="{{ equipment.image.url }}" alt="{{ equipment.name}}" class="{% if forloop.first %}active{% endif %}" data-description="{{equipment.description}}" />
+            <img
+              src="{{ equipment.image.url }}"
+              alt="{{ equipment.name}}"
+              class="{% if forloop.first %}active{% endif %}"
+              data-description="{{equipment.description}}"
+            />
             {% endfor %}
           </div>
           <button class="buttons" id="next1">&#10095;</button>
@@ -52,14 +60,21 @@
     </div>
 
     <div class="content_block" id="pt_slider">
-      <h2>Personal Trainers</h2>
-      <p class="header_ext">Never gone to a gym before? Dont know where to start? Stuck with your progress?</p>
+      <h2>{% trans "Personal Trainers"%}</h2>
+      <p class="header_ext">
+        {% trans "Never gone to a gym before? Dont know where to start? Stuck with your progress?"%}
+      </p>
       <div class="content_block_info">
         <div class="image_gallery">
           <button class="buttons" id="prev2">&#10094;</button>
           <div class="slider_container">
             {% for type in personal_trainer %}
-            <img src="{{ type.image.url }}" alt="{{ type.name}}" class="{% if forloop.first %}active{% endif %}" data-description="{{type.description}}" />
+            <img
+              src="{{ type.image.url }}"
+              alt="{{ type.name}}"
+              class="{% if forloop.first %}active{% endif %}"
+              data-description="{{type.description}}"
+            />
             {% endfor %}
           </div>
           <button class="buttons" id="next2">&#10095;</button>
@@ -74,8 +89,8 @@
     </div>
 
     <div class="content_block">
-      <h2>Tanning bed</h2>
-      <p class="header_ext">Not only bodybuilders should look bronze!</p>
+      <h2>{% trans "Tanning bed"%}</h2>
+      <p class="header_ext">{% trans "Not only bodybuilders should look bronze!"%}</p>
       <div class="content_block_info">
         {% if tanning_bed.first %}
         <div class="image_description">

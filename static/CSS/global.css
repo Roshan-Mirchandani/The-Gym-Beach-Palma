@@ -81,3 +81,21 @@ a:hover {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
 }
+
+#language_select{
+  background-color: lightgray;
+  padding:5%;
+  font-weight: bold;
+  color:#1a1a1a;
+  font-size: large;
+  border-radius: 5px;
+  padding: 0% 10%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#language_option{
+  background-color: #1a1a1a;
+  color:#8eabce;
+}
+
+
