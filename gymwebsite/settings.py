@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'timetable',
     'services',
     'staff',
-    'contact'
+    'contact',
+    'modeltranslation'
 ]
 
 MIDDLEWARE = [
@@ -152,5 +153,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
 EMAIL_RECEIVER = 'roshan.experiments.stuff@gmail.com'
 
 #$env:EMAIL_USER = "your_email@gmail.com"
-#bxzg bopz ftpw qbsj
+#$env:EMAIL_PASS = "bxzg bopz ftpw qbsj"  - app password for contact form, needed because 2FA is on
 
+# print("email sender",EMAIL_HOST_USER) #for debugging
+# print("email password",EMAIL_HOST_PASSWORD)#for debugging

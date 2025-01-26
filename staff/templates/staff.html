@@ -47,15 +47,16 @@
     <br /><br /><br />
 
     {% for trainer in personal_trainer %} {% if forloop.counter0|divisibleby:2 %}
+    <!-- forloop used to mirror every other div for styling purposes-->
     <div class="pt_container">
       <div class="pt_image">
         <img src="{{trainer.portrait.url}}" />
       </div>
       <div class="pt_text">
         <p class="name">{{trainer.name}}</p>
-        <p class="languages">Languages: {{trainer.languages}}</p>
+        <p class="languages">{% trans "Languages" %}: {{trainer.languages}}</p>
         <p class="text">{{trainer.text}}</p>
-        <p class="number">Whatsapp Number: {{trainer.whatsapp_number}}</p>
+        <p class="number">{% trans "Whatsapp Number" %}: {{trainer.whatsapp_number}}</p>
       </div>
     </div>
 
@@ -64,9 +65,9 @@
     <div class="pt_container">
       <div class="pt_text" style="padding-left: 10%; padding-right: 2%">
         <p class="name" style="text-align: right">{{trainer.name}}</p>
-        <p class="languages" style="text-align: right">Languages: {{trainer.languages}}</p>
+        <p class="languages" style="text-align: right">{% trans "Languages" %}: {{trainer.languages}}</p>
         <p class="text">{{trainer.text}}</p>
-        <p class="number" style="text-align: right">Whatsapp Number: {{trainer.whatsapp_number}}</p>
+        <p class="number" style="text-align: right">{% trans "Whatsapp Number" %}: {{trainer.whatsapp_number}}</p>
       </div>
       <div class="pt_image" style="justify-content: flex-start">
         <img src="{{trainer.portrait.url}}" />

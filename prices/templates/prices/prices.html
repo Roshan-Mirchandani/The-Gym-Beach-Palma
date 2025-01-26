@@ -19,14 +19,14 @@
 
     <div id="price_box_container">
       <div id="price_boxes">
-        <h3>Initial Payment: €{{initial_payment.price}}</h3>
+        <h3>{% trans "Initial Payment" %}: €{{initial_payment.price}}</h3>
         <p>{% trans "This is an obligatory payment that covers your gym chip and server fees"%}</p>
       </div>
 
       <div id="price_boxes">
         <h3>{% trans "Monthly Payments"%}</h3>
         {% for methods in monthly_payments %}
-        <p>Paying with {{methods.payment_method}} : €{{methods.price}}</p>
+        <p>{% trans "Paying with" %} {{methods.get_payment_method_display}} : €{{methods.price}}</p> <!--using get_FOO_dispaly() :0 !-->
         {% endfor %}
       </div>
 
@@ -48,7 +48,18 @@
     <div id="price_box_container">
       {% for rates in one_time_payments %}
       <div id="price_boxes" style="justify-content: center; font-weight: bold; font-size: x-large">
-        <p>{{rates.days}} days: €{{rates.price}}</p>
+        <!-- prettier-ignore-start-->
+        <!--very annoyingly long code for singular/plural fix-->
+        <p>
+          {{rates.days}}
+          {% if rates.days == 1 %} 
+          {% trans "day" %} 
+          {% else %} 
+          {% trans "days" %} 
+          {% endif %}
+          : €{{rates.price}}
+        </p>
+         <!-- prettier-ignore-end-->
       </div>
       {% endfor %}
     </div>
@@ -70,7 +81,7 @@
           font-size: x-large;
         "
       >
-        <p>Renting a {{rentable.rentable}}: €{{rentable.price}}</p>
+        <p>{% trans "Renting a"%} {{rentable.rentable}}: €{{rentable.price}}</p>
       </div>
       {% endfor %}
     </div>

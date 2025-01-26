@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class OneTimePayments(models.Model):
@@ -17,8 +18,8 @@ class InitialPayment(models.Model):
 
 
 class PaymentMethod(models.TextChoices):
-    CASH = 'Cash', 'Cash'
-    CARD = 'Card', 'Card'
+    CASH = 'Cash', _('Cash')
+    CARD = 'Card', _('Card')
     
 
 class MonthlyPayments(models.Model):

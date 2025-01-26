@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 18:46+0100\n"
+"POT-Creation-Date: 2025-01-26 17:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgstr "ENVIAR"
 msgid "Your query has been sent successfully!"
 msgstr "Tu mensaje ha sido enviada exitosamente"
 
-#: .\contact\views.py:35
+#: .\contact\views.py:36
 msgid "Failed to send message. Try again!"
 msgstr "No se pudo mandar su mensaje. Por favor intente de nuevo!"
 
@@ -89,6 +89,14 @@ msgstr ""
 "más óptimo, sin mencionar las impresionantes vistas de la playa a las que "
 "puede ir inmediatamente después de ejercitarse."
 
+#: .\prices\models.py:21
+msgid "Cash"
+msgstr "Efectivo"
+
+#: .\prices\models.py:22
+msgid "Card"
+msgstr "Tarjeta"
+
 #: .\prices\templates\prices\prices.html:15
 msgid "Pricing"
 msgstr "Precio"
@@ -96,6 +104,10 @@ msgstr "Precio"
 #: .\prices\templates\prices\prices.html:18
 msgid "Membership plans for Regulars"
 msgstr "Planes para socios"
+
+#: .\prices\templates\prices\prices.html:22
+msgid "Initial Payment"
+msgstr "Pago Inicial"
 
 #: .\prices\templates\prices\prices.html:23
 msgid "This is an obligatory payment that covers your gym chip and server fees"
@@ -106,6 +118,10 @@ msgstr ""
 #: .\prices\templates\prices\prices.html:27
 msgid "Monthly Payments"
 msgstr "Pagos Mensuales"
+
+#: .\prices\templates\prices\prices.html:29
+msgid "Paying with"
+msgstr "Pagando con"
 
 #: .\prices\templates\prices\prices.html:34
 msgid "Extra Payments"
@@ -119,11 +135,23 @@ msgstr "Planes para viajeros"
 msgid "*The following prices are one time payments"
 msgstr "*Los siguientes precios son pagos unicos"
 
-#: .\prices\templates\prices\prices.html:60
+#: .\prices\templates\prices\prices.html:56
+msgid "day"
+msgstr "dia"
+
+#: .\prices\templates\prices\prices.html:58
+msgid "days"
+msgstr "dias"
+
+#: .\prices\templates\prices\prices.html:71
 msgid "Renting equipment"
 msgstr "Alquiler de equipaje"
 
-#: .\services\templates\services.html:20
+#: .\prices\templates\prices\prices.html:84
+msgid "Renting a"
+msgstr "Alquilando un"
+
+#: .\services\templates\services.html:20 .\services\templates\services.html:31
 msgid "Gym Equipment"
 msgstr "Aparatos del Gimnasio"
 
@@ -144,13 +172,17 @@ msgstr "Servicios"
 msgid ""
 " Our gym provides a variety of equipment to help fit your needs best, any\n"
 "        goal is possible! Click the arrow to go through each section. "
-msgstr "Nuestro gimnasio ofrece una variedad de aparatos para ayudar a satisfacer mejor sus necesidades, cualquier objetivo es posible! Pulse las flechas para ver cada seccion"
+msgstr ""
+"Nuestro gimnasio ofrece una variedad de aparatos para ayudar a satisfacer "
+"mejor sus necesidades, cualquier objetivo es posible! Pulse las flechas para "
+"ver cada seccion"
 
 #: .\services\templates\services.html:65
 msgid ""
 "Never gone to a gym before? Dont know where to start? Stuck with your "
 "progress?"
-msgstr "Nunca has ido al gimnasio? No sabes donde empezar? Atascado con tu progreso?"
+msgstr ""
+"Nunca has ido al gimnasio? No sabes donde empezar? Atascado con tu progreso?"
 
 #: .\services\templates\services.html:93
 msgid "Not only bodybuilders should look bronze!"
@@ -177,6 +209,14 @@ msgid "The following are a list of licensed personal trainers our gym offers"
 msgstr ""
 "Lo siguiente es una lista de entrenadores profesionales que nuestra gimnasio "
 "ofrece"
+
+#: .\staff\templates\staff.html:57 .\staff\templates\staff.html:68
+msgid "Languages"
+msgstr "Idiomas"
+
+#: .\staff\templates\staff.html:59 .\staff\templates\staff.html:70
+msgid "Whatsapp Number"
+msgstr "Numero de Whatsapp"
 
 #: .\templates\base.html:26
 msgid "Home"
