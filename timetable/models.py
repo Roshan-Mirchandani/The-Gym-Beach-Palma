@@ -21,7 +21,7 @@ class Season(models.TextChoices):
     WINTER = 'Winter'
 
 class SeasonalTimetable(models.Model):
-    season = models.CharField(max_length=100, choices=Season.choices)
+    season = models.CharField(max_length=100, choices=Season.choices, unique=True)
     dates = models.CharField(max_length=100)
 
     def __str__(self):

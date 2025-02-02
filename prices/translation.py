@@ -1,12 +1,12 @@
 from modeltranslation.translator import translator, TranslationOptions
-from .models import ExtraPayments, RentCosts
+from .models import ExtraPayment, RentCost
 
 class ExtraPaymentOptions(TranslationOptions):
     fields =('extra_service',)
 
-translator.register(ExtraPayments,ExtraPaymentOptions)
+translator.register(ExtraPayment,ExtraPaymentOptions)
 
-class RentCostsOptions(TranslationOptions):
+class RentCostOptions(TranslationOptions):
     fields =('rentable',)
 
-translator.register(RentCosts,RentCostsOptions)
+translator.register(RentCost,RentCostOptions)

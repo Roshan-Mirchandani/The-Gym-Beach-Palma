@@ -22,15 +22,15 @@ class PaymentMethod(models.TextChoices):
     CARD = 'Card', _('Card')
     
 
-class MonthlyPayments(models.Model):
-    payment_method = models.CharField(max_length=10, choices=PaymentMethod.choices)
+class MonthlyPayment(models.Model):
+    payment_method = models.CharField(max_length=10, choices=PaymentMethod.choices, unique=True)
     price = models.DecimalField(max_digits=6,decimal_places=2)
 
     def __str__(self):
         return f"{self.payment_method} - €{self.price}"
 
 
-class ExtraPayments(models.Model):
+class ExtraPayment(models.Model):
     extra_service = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=6,decimal_places=2)
     
@@ -38,7 +38,7 @@ class ExtraPayments(models.Model):
         return f"{self.extra_service} - €{self.price}"
 
 
-class RentCosts(models.Model):
+class RentCost(models.Model):
     rentable =  models.CharField(max_length=100)
     price = models.DecimalField(max_digits=6,decimal_places=2)
 
