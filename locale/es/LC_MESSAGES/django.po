@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-26 17:55+0100\n"
+"POT-Creation-Date: 2025-01-27 17:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,28 +147,28 @@ msgstr "dias"
 msgid "Renting equipment"
 msgstr "Alquiler de equipaje"
 
-#: .\prices\templates\prices\prices.html:84
+#: .\prices\templates\prices\prices.html:76
 msgid "Renting a"
 msgstr "Alquilando un"
 
-#: .\services\templates\services.html:20 .\services\templates\services.html:31
+#: .\services\templates\services.html:21 .\services\templates\services.html:32
 msgid "Gym Equipment"
 msgstr "Aparatos del Gimnasio"
 
-#: .\services\templates\services.html:21 .\services\templates\services.html:63
+#: .\services\templates\services.html:22 .\services\templates\services.html:64
 #: .\staff\templates\staff.html:41
 msgid "Personal Trainers"
 msgstr "Entrenadores Personales"
 
-#: .\services\templates\services.html:22 .\services\templates\services.html:92
+#: .\services\templates\services.html:23 .\services\templates\services.html:93
 msgid "Tanning bed"
 msgstr "Cama de Bronceado"
 
-#: .\services\templates\services.html:28 .\templates\base.html:28
+#: .\services\templates\services.html:29 .\templates\base.html:28
 msgid "Services"
 msgstr "Servicios"
 
-#: .\services\templates\services.html:33
+#: .\services\templates\services.html:34
 msgid ""
 " Our gym provides a variety of equipment to help fit your needs best, any\n"
 "        goal is possible! Click the arrow to go through each section. "
@@ -177,14 +177,14 @@ msgstr ""
 "mejor sus necesidades, cualquier objetivo es posible! Pulse las flechas para "
 "ver cada seccion"
 
-#: .\services\templates\services.html:65
+#: .\services\templates\services.html:66
 msgid ""
 "Never gone to a gym before? Dont know where to start? Stuck with your "
 "progress?"
 msgstr ""
 "Nunca has ido al gimnasio? No sabes donde empezar? Atascado con tu progreso?"
 
-#: .\services\templates\services.html:93
+#: .\services\templates\services.html:94
 msgid "Not only bodybuilders should look bronze!"
 msgstr "¡No solo los culturistas deberían lucir de bronce!"
 
@@ -239,8 +239,9 @@ msgid "Timetables"
 msgstr "Horarios"
 
 #: .\timetable\templates\timetable.html:19
-msgid "Autumn/Winter/Spring Period"
-msgstr "Temporada de Otoño/Invierno/Primavera"
+
+msgid "Autumn/ Winter/ Spring Period"
+msgstr "Temporada de Otoño/ Invierno/ Primavera"
 
 #: .\timetable\templates\timetable.html:28
 msgid "Summer Period"

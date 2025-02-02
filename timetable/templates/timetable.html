@@ -15,8 +15,8 @@
 <h1>{% trans "Timetables" %}</h1>
 
 <div id="timetables_main">
-  <div id="timetable">
-    <h2>{% trans "Autumn/Winter/Spring Period" %}</h2>
+  <div class="timetable">
+    <h2>{% trans "Autumn/ Winter/ Spring Period" %}</h2>
     <h3>{{winter_season.dates}}</h3>
     {% for info in winter_timetable %}
     <p id="days_info">{{info.days}}</p>
@@ -24,7 +24,7 @@
     {% endfor %}
   </div>
 
-  <div id="timetable" style="background-color: #1a1a1a">
+  <div class="timetable" style="background-color: #1a1a1a">
     <h2>{% trans "Summer Period" %}</h2>
     <h3>{{summer_season.dates}}</h3>
     {% for info in summer_timetable %}

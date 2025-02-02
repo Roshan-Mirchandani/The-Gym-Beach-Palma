@@ -19,9 +19,10 @@
     <div id="banner">
       <div id="logo_div">
         <img id="logo" src="{% static 'images/logo.png' %}" />
+        <button id="menu-toggle">&#9776;</button> <!-- Hamburger icon -->
       </div>
-      <div>
-        <nav>
+      <div id="nav_div">
+        <nav style="width:100%;">
           <ul id="base_nav">
             <li id="base_nav_li"><a href="{% url 'home' %}">{% trans "Home"%}</a></li>
             <li id="base_nav_li"><a href="{% url 'prices' %}">{% trans "Price"%}</a></li>
@@ -65,8 +66,11 @@
         <div id="footer_number">971261783</div>
       </div>
     </footer>
+    
+    <script src="{% static 'js/global.js' %}"></script>
   </body>
 </html>
+
 <!-- superuser/ username : steven123 / email : / password: mancuernas-->
 
 

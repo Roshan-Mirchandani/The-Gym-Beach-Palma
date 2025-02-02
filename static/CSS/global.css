@@ -4,6 +4,7 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,6 +65,9 @@ a:hover {
   align-content: center;
 }
 
+#menu-toggle{ 
+  display:none
+}
 #footer_layout {
   display: flex;
   flex-direction: row;
@@ -98,4 +102,88 @@ a:hover {
   color:#8eabce;
 }
 
+/* Screen size for split screen SMALL LAPTOP*/
+/* also valid for tablet, likely small demographic*/ 
+@media(max-width:800px) {
+  #footer_image {
+    height: 130px;
+
+  }
+}
+
+/* Screen size for phones */
+@media(max-width:400px) {
+
+  #logo{
+    height:100px;
+  }
+
+  #logo_div{
+    display: flex;
+    height:15vh;
+    width:100%;
+    border-bottom: #8eabce 2px solid;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+  }
+
+  #logo_div.nav_open{
+    position: fixed;
+  }
+
+  #nav_div{
+    border-top: #8eabce 3px solid;
+    height: 85vh; 
+    right: -100vw; /*switch to 0 to make visible*/
+    width: 100vw;
+    position: fixed;
+    top:15vh;
+    display: flex;
+    background-color: #1a1a1a;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  #nav_div.nav_open{  
+    right:0;
+  }
+  #base_nav{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #menu-toggle{
+    display: block;
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    margin-right:20px;
+    color:lightgray;
+    background-color: #1a1a1a;
+  }
+
+  #base_nav_li {
+    text-align: center;
+    text-decoration: underline;
+    
+  }
+
+  #footer_layout{
+    flex-direction: column;
+  }
+  #footer_image {
+    height: 80px;
+    width: auto;
+  }
+  #footer_number{
+    margin-bottom: 30px ;
+  }
+}
+
+/* Screen size for laptop
+@media(max-width:1) {
+
+}*/
 

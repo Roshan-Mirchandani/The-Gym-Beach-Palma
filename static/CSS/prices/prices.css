@@ -35,7 +35,8 @@ h4 {
   justify-content: space-between;
   gap: 40px;
 }
-#price_boxes {
+
+.price_boxes {
   display: flex;
   flex-direction: column;
   background-color: #8eabce;
@@ -46,4 +47,63 @@ h4 {
   font-size: large;
   justify-content: flex-start;
   align-items: center;
+}
+
+.price_boxes_otp{
+  font-size: x-large;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.price_boxes_rent{
+  font-size: x-large;
+  justify-content: center;
+  aspect-ratio: initial;
+  font-weight: bold;
+}
+
+/* Screen size for split screen SMALL LAPTOP*/
+/* also valid for tablet, likely small demographic*/ 
+@media(max-width:800px) {
+h3{
+  font-size: larger;
+}
+.price_boxes {
+  font-size: medium;
+}
+.price_boxes_otp{
+  font-size: medium;
+}
+
+.price_boxes_rent{
+  font-size: medium;
+}
+
+#price_box_container {
+  gap: 20px;
+}
+
+}
+
+/* Screen size for phones */
+@media(max-width:400px) {
+  #price_box_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  h2{
+    text-align: center;
+  }
+  
+  .price_boxes {
+    font-size: larger;
+    margin: 3%;
+    text-align: center;
+    aspect-ratio:unset;
+  }
+  
+  h3{
+    font-size: x-large;
+  }
 }

@@ -10,7 +10,7 @@
   rel="stylesheet"
 />
 
-<div id="staff_container">
+<div >
   <h1>{% trans "Staff" %}</h1>
 
   <div id="assistant_section">
@@ -62,15 +62,15 @@
 
     {% else %}
 
-    <div class="pt_container">
-      <div class="pt_text" style="padding-left: 10%; padding-right: 2%">
-        <p class="name" style="text-align: right">{{trainer.name}}</p>
-        <p class="languages" style="text-align: right">{% trans "Languages" %}: {{trainer.languages}}</p>
-        <p class="text">{{trainer.text}}</p>
-        <p class="number" style="text-align: right">{% trans "Whatsapp Number" %}: {{trainer.whatsapp_number}}</p>
-      </div>
-      <div class="pt_image" style="justify-content: flex-start">
+    <div class="pt_container pt_container_reverse">
+      <div class="pt_image pt_image_inverse" >
         <img src="{{trainer.portrait.url}}" />
+      </div>
+      <div class="pt_text pt_text_inverse" >
+        <p class="name inverse">{{trainer.name}}</p>
+        <p class="languages inverse" >{% trans "Languages" %}: {{trainer.languages}}</p>
+        <p class="text">{{trainer.text}}</p>
+        <p class="number inverse" >{% trans "Whatsapp Number" %}: {{trainer.whatsapp_number}}</p>
       </div>
     </div>
     {% endif %}

@@ -1,3 +1,5 @@
+/* css on different dimensions is hella buggy */
+
 h1 {
   justify-self: center;
   font-family: "Kanit";
@@ -20,8 +22,7 @@ h2 {
   font-family: "Roboto Slab";
   font-size: large;
 }
-#staff_container {
-}
+
 
 #assistant_section {
   width: 100%;
@@ -73,20 +74,28 @@ h2 {
   display: flex;
   width: 100%;
 }
+
+.pt_container_reverse{
+  flex-direction: row-reverse;
+}
 .pt_image {
   max-height: 95vh;
   width: 50%;
   display: flex;
   box-sizing: border-box;
   justify-content: flex-end;
+
 }
 .pt_image img {
   height: 95%;
   width: auto;
   border: 20px solid #1a1a1a;
 }
+.pt_image_inverse{
+  justify-content: flex-start;
+}
 .pt_text {
-  max-height: 90vh;
+  height: min-content;
   width: 50%;
   display: flex;
   box-sizing: border-box;
@@ -96,6 +105,12 @@ h2 {
   background-color: #1a1a1a;
   color: lightgray;
   align-self: center;
+  text-align: justify;
+}
+
+.pt_text_inverse{
+  padding-left: 10%;
+  padding-right: 2%
 }
 
 .pt_text p.name {
@@ -107,12 +122,13 @@ h2 {
   color: #8eabce;
 }
 
+.pt_text p.inverse{
+  text-align: right
+}
+
 .pt_text p.languages,
 p.text {
-  justify-self: flex-start;
-  font-family: "Roboto Slab";
   font-size: larger;
-  text-align: justify;
 }
 
 .pt_text p.number {
@@ -120,4 +136,78 @@ p.text {
   font-family: "Roboto Slab";
   font-size: larger;
   font-weight: bold;
+}
+
+
+/* Screen size for split screen SMALL LAPTOP*/
+/* also valid for tablet, likely small demographic*/ 
+@media(max-width:1000px) {
+.pt_image {
+  max-height: 70vh;
+}
+
+.pt_text {
+  max-height: 90vh;
+  padding-right: 5%;
+  padding-left: 2%;
+}
+
+.pt_text_inverse{
+  padding-left: 5%;
+  padding-right: 2%
+}
+.pt_text p.name {
+  font-size: x-large;
+}
+
+  .pt_text p.languages,
+p.text {
+  justify-self: flex-start;
+  font-family: "Roboto Slab";
+  font-size: small;
+  text-align: justify;
+}
+
+.pt_text p.number {
+  font-size: medium;
+}
+}
+
+/* Screen size for phones */
+@media(max-width:400px) {
+  .staff_row{
+    flex-direction: column;
+  }
+
+  .staff_column p.name {
+    margin-bottom: 0;
+  }
+  .staff_column p.role{
+    margin-top: 0;
+  }
+  .pt_container{
+    flex-direction: column;
+  }
+
+  .pt_image{
+    max-height:60vh;
+    width:auto;
+    justify-content:center ;
+  }
+  .pt_image img{
+    height:300px;
+    width:auto;
+  }
+
+  .pt_text{
+    width:90%;
+    justify-self: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pt_text p.inverse{
+    text-align: left;
+  }
+  
 }

@@ -14,9 +14,23 @@ h2 {
   font-family: "Kanit";
 }
 
+#sidebar {
+  display: flex;
+  max-height: 100vh;
+  position: sticky;
+  top:0;
+  background-color: gray;
+  flex: 1;
+  height: 100%;
+}
+#nav_push_down{
+  margin-top: 70%;
+}
 #services_li {
-  list-style-type: none;
   font-family: "Montserrat", sans-serif;
+  font-size:medium;
+  margin-bottom: 30px;
+  
 }
 
 #services_li:hover {
@@ -26,13 +40,6 @@ h2 {
 #services_container {
   display: flex;
   width: 100%;
-  height: 100%;
-}
-
-#sidebar {
-  justify-self: flex-start;
-  background-color: gray;
-  flex: 1;
   height: 100%;
 }
 
@@ -94,4 +101,69 @@ h2 {
 
 .slider_container img.active {
   display: block;
+}
+
+/* Screen size for split screen SMALL LAPTOP*/
+/* also valid for tablet, likely small demographic*/ 
+@media(max-width:800px) {
+
+  #services_li {
+    font-size:small;
+  }
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    align-self: center;
+  }
+  .content_block {
+    flex:none;
+    min-height: auto
+  }
+
+  .content_block_info {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .content_block_inverse{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .image_description {
+    font-size: medium;
+
+  }
+}
+
+/* Screen size for phones */
+@media(max-width:400px) {
+
+  #services_container{
+    flex-direction: column;
+  }
+  #sidebar{
+    position:unset;
+    width:100%;
+    height:40px;
+    flex:none;
+  } 
+
+  #nav_push_down{
+    margin-top: 0;
+    width: 100%;
+  }
+
+  #phone_view_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding:0;
+    width: 100%;
+  }
+  #services_li {
+    list-style-type: none;
+  }
 }

@@ -15,11 +15,12 @@
 <div id="services_container">
   <aside id="sidebar">
     <br />
-    <nav>
-      <ul>
-        <li id="services_li">{% trans "Gym Equipment" %}</li>
-        <li id="services_li">{% trans "Personal Trainers" %}</li>
-        <li id="services_li">{% trans "Tanning bed" %}</li>
+    <br><br><br>
+    <nav id="nav_push_down">
+      <ul id="phone_view_list">
+        <li id="services_li"><a href = "#gym_equip">{% trans "Gym Equipment" %}</a></li>
+        <li id="services_li"><a href = "#pt_slider">{% trans "Personal Trainers" %}</a></li>
+        <li id="services_li"><a href = "#tanning_sec">{% trans "Tanning bed" %}</a></li>
       </ul>
     </nav>
   </aside>
@@ -27,7 +28,7 @@
   <div id="content">
     <h1>{% trans "Services" %}</h1>
 
-    <div class="content_block">
+    <div class="content_block" id="gym_equip">
       <h2>{% trans "Gym Equipment" %}</h2>
       <p class="header_ext">
         {% blocktrans %} Our gym provides a variety of equipment to help fit your needs best, any
@@ -64,7 +65,7 @@
       <p class="header_ext">
         {% trans "Never gone to a gym before? Dont know where to start? Stuck with your progress?"%}
       </p>
-      <div class="content_block_info">
+      <div class="content_block_info content_block_inverse">
         <div class="image_gallery">
           <button class="buttons" id="prev2">&#10094;</button>
           <div class="slider_container">
@@ -88,7 +89,7 @@
       </div>
     </div>
 
-    <div class="content_block">
+    <div class="content_block" id="tanning_sec">
       <h2>{% trans "Tanning bed"%}</h2>
       <p class="header_ext">{% trans "Not only bodybuilders should look bronze!"%}</p>
       <div class="content_block_info">

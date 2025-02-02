@@ -1,3 +1,4 @@
+
 h1 {
   justify-self: center;
   font-family: "Kanit";
@@ -25,11 +26,12 @@ h3 {
 #timetables_main {
   display: flex;
   flex: 1;
+  
 }
 
-#timetable {
+.timetable {
   flex: 1;
-  padding: 2%;
+  padding:2%;
   margin: 2%;
   display: flex;
   flex-direction: column;
@@ -49,4 +51,38 @@ h3 {
   justify-self: center;
   font-weight: bold;
   text-align: center;
+}
+
+/* Screen size for split screen SMALL LAPTOP*/
+/* also valid for tablet, likely small demographic*/ 
+@media(max-width:800px) {
+/* seems to be fine already*/
+h2{
+  font-size: x-large;
+}
+
+h3 {
+  font-size: larger;
+}
+
+#days_info {
+  font-size: large;
+}
+#time_info {
+  font-size: larger;
+}
+
+}
+  
+/* Screen size for phones */
+@media(max-width:400px) {
+  #timetables_main{
+  flex-direction: column;
+  }
+  h1{
+    width:100%;
+    text-align: center;
+    border-bottom: #1a1a1a 5px solid ;
+  }
+  
 }

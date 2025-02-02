@@ -47,7 +47,7 @@ label {
   font-family: "Kanit";
 }
 
-button {
+#submit {
   background-color: #8eabce;
   color: #1a1a1a;
   border-radius: 5px;
@@ -98,4 +98,27 @@ textarea {
   font-family: "Kanit";
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Screen size for phones */
+@media(max-width:400px) {
+  #contact_container {
+    flex-direction: column;
+  }
+
+  #contact_info{
+    flex:none;
+  }
+
+  #form_container{
+    flex:none;
+    padding-top: 20px;
+    border-top: 2px solid #8eabce;
+  }
+
+  #contact_form {
+    padding:10px;
+    padding-right:0;
+  }
+
 }
