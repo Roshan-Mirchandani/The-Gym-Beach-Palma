@@ -26,7 +26,8 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('',include('homepage.urls')),
+    path('', include('landing_page.urls')),
+    path('homepage/',include('homepage.urls')),
     path('prices/', include ('prices.urls')),
     path('timetable/',include('timetable.urls')),
     path('services/',include ('services.urls')),

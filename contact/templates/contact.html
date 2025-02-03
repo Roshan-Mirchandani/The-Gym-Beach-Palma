@@ -34,7 +34,7 @@
   </div>
 
   <div id="form_container">
-    <form action="{% url 'contact' %}" method="POST" id="contact_form">
+    <form method="POST" id="contact_form" action = "{% if location %}{% url 'contact_with_location' location %}{% else %}{% url 'contact' %}{% endif %}">
       {% csrf_token %}
       <label for="name">*{% trans "Name" %}:</label>
       <input type="text" id="name" name="name" required />

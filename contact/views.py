@@ -8,7 +8,7 @@ import json
 
 # Create your views here.
 
-def contact(request):
+def contact(request, location=None):
     if request.method == 'POST':
         print("if working")
         name = request.POST.get('name')
@@ -39,5 +39,5 @@ def contact(request):
     message_list = [message.message for message in messages.get_messages(request)]
     
 
-    return render(request,'contact.html', {'messages': json.dumps(message_list)})
+    return render(request,'contact.html', {'messages': json.dumps(message_list), 'location':location})
 

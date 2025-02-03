@@ -1,0 +1,62 @@
+html {
+    background-color: #1a1a1a; /* Sets the background color for the entire page */
+    height: 100%; /* Ensures the background covers the full height of the page */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  h1{
+    font-size: xx-large;
+    font-family: "Kanit";
+    font-weight: bold;
+    justify-self: center;
+    color:lightgray;
+  }
+
+  h2{
+    font-size: x-large;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    justify-self: center;
+    color:#8eabce;
+  }
+
+  #img_container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  img{
+    height: 250px;
+    width: auto;
+  }
+
+  #loc_buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    padding-top:30px;
+  }
+
+  a{
+    all: unset; 
+    text-decoration: none;
+    font-size: large;
+    font-family:'Roboto Slab';
+    color: lightgray;
+    border: 3px lightgray solid;
+    border-radius:5px;
+    text-align: center;
+    padding-top: 10px;
+    width:100px;
+    height: 40px;
+  }
+
+  a:hover{
+    font-weight: bold;
+    cursor: pointer;
+    color:#8eabce;
+    border-color: #8eabce;;
+  }

@@ -24,12 +24,12 @@
       <div id="nav_div">
         <nav style="width:100%;">
           <ul id="base_nav">
-            <li id="base_nav_li"><a href="{% url 'home' %}">{% trans "Home"%}</a></li>
-            <li id="base_nav_li"><a href="{% url 'prices' %}">{% trans "Price"%}</a></li>
-            <li id="base_nav_li"><a href="{% url 'services' %}">{% trans "Services"%}</a></li>
-            <li id="base_nav_li"><a href="{% url 'timetable' %}">{% trans "Timetable"%}</a></li>
-            <li id="base_nav_li"><a href="{% url 'staff'%}">{% trans "Staff"%}</a></li>
-            <li id="base_nav_li"><a href="{% url 'contact' %}">{% trans "Contact"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'home' location %}">{% trans "Home"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'prices' location %}">{% trans "Price"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'services' location %}">{% trans "Services"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'timetable' location %}">{% trans "Timetable"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'staff' location %}">{% trans "Staff"%}</a></li>
+            <li id="base_nav_li"><a href="{% url 'contact_with_location' location %}">{% trans "Contact"%}</a></li>
             <li id="base_nav_li">
               <form method="post" action="{% url 'set_language' %}" >
                 {% csrf_token %}

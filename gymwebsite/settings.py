@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'services',
     'staff',
     'contact',
-    'modeltranslation'
+    'modeltranslation',
+    'landing_page'
 ]
 
 MIDDLEWARE = [
@@ -155,5 +156,5 @@ EMAIL_RECEIVER = 'roshan.experiments.stuff@gmail.com'
 #$env:EMAIL_USER = "your_email@gmail.com"
 #$env:EMAIL_PASS = "bxzg bopz ftpw qbsj"  - app password for contact form, needed because 2FA is on
 
-# print("email sender",EMAIL_HOST_USER) #for debugging
-# print("email password",EMAIL_HOST_PASSWORD)#for debugging
+#print("email sender",EMAIL_HOST_USER) #for debugging
+#print("email password",EMAIL_HOST_PASSWORD)#for debugging

@@ -2,5 +2,5 @@ from django.urls import path
 from . import views 
 
 urlpatterns = [
-    path('', views.prices, name = 'prices')
+    path('<str:location>/', views.prices, name = 'prices')
 ]
